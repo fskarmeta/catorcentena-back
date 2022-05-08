@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_catorcentena_social_medias",
+  "info": {
+    "displayName": "socialMedia",
+    "icon": "project-diagram"
+  },
+  "options": {},
+  "attributes": {
+    "instagram": {
+      "type": "string"
+    },
+    "soundcloud": {
+      "type": "string"
+    },
+    "mixcloud": {
+      "type": "string"
+    }
+  }
+}

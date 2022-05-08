@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "singularName": "artist",
+    "pluralName": "artists",
+    "displayName": "artist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "artistName": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "artistName",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "socialMedia": {
+      "displayName": "socialMedia",
+      "type": "component",
+      "repeatable": false,
+      "component": "catorcentena.social-media",
+      "required": true
+    },
+    "music_styles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::music-style.music-style",
+      "inversedBy": "artists"
+    },
+    "radio_shows": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::radio-show.radio-show",
+      "mappedBy": "artists"
+    }
+  }
+}

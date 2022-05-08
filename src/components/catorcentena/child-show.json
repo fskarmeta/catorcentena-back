@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_catorcentena_child_shows",
+  "info": {
+    "displayName": "childShow",
+    "icon": "step-forward",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "mixcloudUrl": {
+      "type": "string",
+      "required": true
+    },
+    "music_styles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::music-style.music-style"
+    }
+  }
+}

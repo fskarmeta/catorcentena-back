@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "radio_shows",
+  "info": {
+    "singularName": "radio-show",
+    "pluralName": "radio-shows",
+    "displayName": "radioShow",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "shortTitle": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "shortTitle",
+      "required": true
+    },
+    "longTitle": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "childShow": {
+      "displayName": "childShow",
+      "type": "component",
+      "repeatable": true,
+      "component": "catorcentena.child-show",
+      "required": false
+    },
+    "artists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artist.artist",
+      "inversedBy": "radio_shows"
+    },
+    "music_styles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::music-style.music-style",
+      "inversedBy": "radio_shows"
+    },
+    "description": {
+      "type": "text",
+      "unique": false,
+      "required": true
+    }
+  }
+}
