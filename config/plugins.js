@@ -24,6 +24,7 @@ module.exports = ({ env }) => ({
         tracing: true,
         introspection: true,
       },
+      defaultLimit: 50,
     },
   },
 });
