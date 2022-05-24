@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "audio_players",
+  "info": {
+    "singularName": "audio-player",
+    "pluralName": "audio-players",
+    "displayName": "audioPlayer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "live": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
