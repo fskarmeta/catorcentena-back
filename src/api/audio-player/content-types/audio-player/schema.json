@@ -15,6 +15,16 @@
     "live": {
       "type": "boolean",
       "default": false
+    },
+    "liveText": {
+      "type": "string",
+      "default": "LIVE MIX NOW",
+      "required": true,
+      "maxLength": 33
+    },
+    "liveMessage": {
+      "type": "text",
+      "required": true
     }
   }
 }
